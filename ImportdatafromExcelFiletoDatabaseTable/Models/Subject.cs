@@ -7,7 +7,7 @@ namespace ImportdatafromExcelFiletoDatabaseTable.Models
 {
     public class Subject
     {
-        public int RefId { get; set; }
+        public string RefId { get; set; }
 
         public string Name { get; set; }
         public string Code { get; set; }

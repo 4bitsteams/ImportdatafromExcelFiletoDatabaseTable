@@ -36,15 +36,15 @@ namespace ImportdatafromExcelFiletoDatabaseTable.Controllers
                 {
                     ExcelWorksheet excelWorksheet = package.Workbook.Worksheets[0];
                     var rowCount = excelWorksheet.Dimension.Rows;
-                    for (int row = 0; row < rowCount; row++)
+                    for (int row = 2; row < rowCount; row++)
                     {
                         SubjectList.Add(new Subject
                         {
 
-                            RefId = (int)excelWorksheet.Cells[row, 1].Value,
+                            RefId = excelWorksheet.Cells[row, 1].Value.ToString().Trim(),
                             Code = excelWorksheet.Cells[row, 2].Value.ToString().Trim(),
                             Name = excelWorksheet.Cells[row, 3].Value.ToString().Trim(),
-                            Description = excelWorksheet.Cells[row, 3].Value.ToString().Trim(),
+                            Description = excelWorksheet.Cells[row, 4].Value.ToString().Trim(),
                         });
                     }
                 }

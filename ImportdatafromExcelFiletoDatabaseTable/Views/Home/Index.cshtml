@@ -6,3 +6,11 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+<div class="container">
+    <form method="post" asp-controller="Home" asp-action="Import" enctype="multipart/form-data">
+        <input type="file" name="formFIle" />
+        <button type="submit">Import From Excel</button>
+    </form>
+</div>
